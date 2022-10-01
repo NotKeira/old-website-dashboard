@@ -9,6 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "discord.js": "^14.5.0",
+    "mongodb": "^4.10.0",
+    "mongoose": "^6.6.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
