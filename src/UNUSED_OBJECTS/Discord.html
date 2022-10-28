@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Discord Information</title>
+    
+  </head>
+  <body>
+    <div id="root"></div>
+    <div id="sideMenu" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="https://discord.gg/koala">Discord Server</a>
+    </div>
+
+    <div id="main">
+      <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>
+    </div>
+
+    <script>
+      function openNav() {
+        document.getElementById("sideMenu").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
+
+      function closeNav() {
+        document.getElementById("sideMenu").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+      }
+    </script>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

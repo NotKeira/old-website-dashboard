@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../CSS/background.css" />
+    <link rel="stylesheet" href="../CSS/menu.css" />
+
+    <title>About Koala Cafe</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <div id="sideMenu" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a href="../HTML/join.html">Join Us!</a>
+      <a href="../HTML/home.html">Home</a>
+      <a href="../HTML/about.html">About</a>
+      <a href="../HTML/staff.html">Our Staff</a>
+      <a href="../HTML/panel.html">Staff Area</a>
+      <a href="https://discord.gg/koala">Discord Server</a>
+    </div>
+
+    <div id="main">
+      <button class="openbtn" onclick="openNav()">☰</button>
+    </div>
+
+    <script>
+      function openNav() {
+        document.getElementById("sideMenu").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
+
+      function closeNav() {
+        document.getElementById("sideMenu").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+      }
+    </script>
+    <img
+      src="https://tr.rbxcdn.com/a47c76abdf1549422d3283e6e00b17d6/150/150/Image/Png"
+      class="center-image"
+    />
+  </body>
+</html>

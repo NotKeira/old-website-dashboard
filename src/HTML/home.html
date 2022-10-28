@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Koala Cafe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../CSS/background.css" />
+    <link rel="stylesheet" href="../CSS/login.css" />
+    <link rel="stylesheet" href="../CSS/menu.css" />
+    <link rel="stylesheet" href="../CSS/search.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://tr.rbxcdn.com/a47c76abdf1549422d3283e6e00b17d6/150/150/Image/Png"
+    />
+    <script src="../JS/passphrases.js"></script>
+    <script src="../JS/login.js"></script>
+    <link rel="" />
+  </head>
+  <body>
+    <div class="topnav">
+      <a class="active" href="#home.html">Home</a>
+      <a href="#join.html">Join Us!</a>
+      <a href="#about.html">About</a>
+      <a href="#staff.html">Our Staff</a>
+      <a href="#panel.html">Staff Area</a>
+      <a href="https://discord.gg/koala">Discord Server</a>
+      <div class="search-container">
+        <form action="../JS/search.js">
+          <input type="text" placeholder="Search Site..." name="search" />
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+    <div id="root"></div>
+    <div id="sideMenu" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a href="../HTML/join.html">Join Us!</a>
+      <a href="../HTML/home.html">Home</a>
+      <a href="../HTML/about.html">About</a>
+      <a href="../HTML/staff.html">Our Staff</a>
+      <a href="../HTML/panel.html">Staff Area</a>
+      <a href="https://discord.gg/koala">Discord Server</a>
+    </div>
+
+    <div id="main">
+      <button class="openbtn" onclick="openNav()">☰</button>
+    </div>
+
+    <script>
+      function openNav() {
+        document.getElementById("sideMenu").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
+
+      function closeNav() {
+        document.getElementById("sideMenu").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+      }
+    </script>
+    <script type="module" src="../JS/main.jsx"></script>
+
+    <button
+      onclick="document.getElementById('login').style.display='block'"
+      style="width: auto"
+    >
+      Login with Roblox
+    </button>
+    <div id="login" class="modal">
+      <form
+        class="model-content animate"
+        action="../PHP/login.php"
+        method="post"
+      >
+        <div class="imgcontainer">
+          <span
+            onclick="document.getElementById('login').style.display='none'"
+            class="close"
+            title="Close Login"
+            >&times;</span
+          >
+
+          <img src="../IMAGES/User.png" alt="Email" class="Account" />
+        </div>
+        <div class="container">
+          <label for="uname"><b>Roblox Username</b></label>
+          <input
+            type="text"
+            placeholder="Enter Username"
+            name="uname"
+            required
+          />
+
+          <label for="passtext"><b>Your Passphrase: </b></label>
+          <label id="passphrase"></label>
+          <button onclick="copy">Copy Phrase</button>
+          <script>
+            function copy() {
+              var copyText = document.getElementById("passphrase");
+
+              copyText.select();
+              copyText.setSelectionRange(0, 10);
+              navigator.clipboard.writeText(copyText.value);
+
+              alert("Copied your phrase: " + copyText.value);
+            }
+          </script>
+          <button id="btnn" type="submit">Check Account Ownership</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember" /> Remember
+            Me
+          </label>
+        </div>
+
+        <div class="container" style="background-color: #f1f1f1">
+          <button
+            type="button"
+            onclick="document.getElementById('login').style.display='none'"
+            class="cancelbtn"
+          >
+            Cancel Login
+          </button>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+      </form>
+    </div>
+    <script>
+      // Call the modal
+      var modal = document.getElementById("login");
+
+      // When user clicks outside of modal: close
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
+    <img
+      src="https://tr.rbxcdn.com/a47c76abdf1549422d3283e6e00b17d6/150/150/Image/Png"
+      class="center-image"
+      alt="logo"
+    />
+  </body>
+</html>

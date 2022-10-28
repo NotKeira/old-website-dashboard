@@ -1,5 +1,9 @@
-function checkStaff(email) {
-  const { owners, managers, moderators } = require("../staff.json");
+async function  checkStaff(email) {
+  const staff = require("../staff.json");
+  const stuff = require("./stuff.json")
+  const noblox = require("noblox.js");
+  const group = await noblox.getGroup(stuff.groupID);
+  
 
   if (
     owners.includes(email) ||

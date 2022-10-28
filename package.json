@@ -1,5 +1,5 @@
 {
-  "name": "kiki-dashboard",
+  "name": "koala-cafe",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -12,6 +12,7 @@
     "discord.js": "^14.5.0",
     "mongodb": "^4.10.0",
     "mongoose": "^6.6.3",
+    "noblox.js": "^4.13.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
