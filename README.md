@@ -1,4 +1,10 @@
-# Angels Restaurant
-This Repository is surrounding the Roblox group "Angel's Delights Restaurant", it is their Website that I, Keira Hopkins, made.
+# Website Dashboard
 
-Any code from this repository is under copyright and may not be used outside of this website. If you are caught doing this you will be sued or you will be forced to delete it entirely.
+This is a Dashboard website template that I did not finish.
+
+# Installation
+
+Firstly, You need to import it into the project do this by running the command `git clone https://github.com/NotKeira/old-website-dashboard.git`
+Secondly, you need to run `cd old-website-dashboard` (This is optional, however you MUST pull the files out of this folder if you choose not to do it)
+Thirdly, you need to install it's dependencies, do this by running `npm i`
+And now you're done.
